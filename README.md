@@ -1,2 +1,1 @@
-# ATB-Common
-https://www.curseforge.com/minecraft/mc-mods/atb-core
+Dynamically replaces lines in the new splash text to remove political slogans without removing all the other fun stuff that was added.
