@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "no_politics",
+  "version": "${version}",
+
+  "name": "No Politics",
+  "description": "Removing those god damn political splash texts",
+  "authors": [
+    "StockiesLad"
+  ],
+  "contact": {
+    "sources": ""
+  },
+
+  "license": "MIT",
+  "environment": "*",
+  "mixins": [
+    "no_politics.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": "*",
+    "java": ">=17"
+  }
+}

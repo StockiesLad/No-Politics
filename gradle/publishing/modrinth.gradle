@@ -1,0 +1,39 @@
+//file:noinspection GroovyAssignabilityCheck
+//file:noinspection GroovyAccessibility
+modrinth {
+    try {
+        var reader = new BufferedReader(new FileReader("C:\\extra_stuff\\ApiTokens\\modrinth_token.txt"))
+        token = reader.readLine()
+        reader.close()
+    } catch (FileNotFoundException ignored) {
+        token = "EMPTY_TOKEN"
+    }
+    projectId = modrinth_id
+    versionNumber = version
+    versionName = "Abstractium-${project.version}"
+    versionType = release_type
+    changelog = changelog_text
+    uploadFile = file(remapJar.archiveFile)
+    additionalFiles = List.of(
+            file("Abstractium-1.18.2//build//libs//${project.archivesBaseName}-1.18.2-${project.version}.jar"),
+    )
+
+    /*afterEvaluate {
+        if (plugins.hasPlugin("io.github.p03w.machete"))
+            tasks.modrinth.dependsOn(tasks.named("optimizeOutputsOfRemapJar"))
+    }*/
+    gameVersions = [
+            "1.20.1",
+            "1.20",
+            "1.19.4",
+            "1.19.3",
+            "1.19.2",
+            "1.19.1",
+            "1.19",
+            "1.18.2"
+    ]
+    loaders = [
+            "fabric",
+            "quilt"
+    ]
+}
